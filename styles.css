@@ -1,0 +1,333 @@
+/* @font-face {
+    font-family: 'Favorit';
+    src: url('ABCFavorit-Regular-Trial.otf') format("otf");
+  } */
+@font-face {
+  font-family: webflow-icons;
+  src: url(ABCFavorit-Regular-Trial.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: tttrailer;
+  src: url(TT_Trailers_Trial_2-000/TT\ Trailers\ Trial\ Black.ttf);
+}
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html,
+#main {
+  height: 100%;
+  background-color: #fcf9ee;
+  font-family: "webflow-icons", sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+}
+#main {
+  position: relative;
+}
+img {
+  max-width: 100%;
+}
+#cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  mix-blend-mode: difference;
+  z-index: 1000;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: none;
+  /* transition: top,left ease 5ms,5ms; */
+}
+ul{
+    list-style-type: none;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav .logo {
+  width: 80px;
+}
+nav .logo img {
+  max-width: 100%;
+}
+.hamburger {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.5px;
+}
+.hamburger .line1 {
+  width: 60%;
+  background-color: black;
+  height: 3px;
+}
+.hamburger .line2 {
+  width: 100%;
+  background-color: black;
+  height: 1.4px;
+}
+.hamburger .line3 {
+  width: 60%;
+  background-color: black;
+  height: 3px;
+  align-self: flex-end;
+}
+nav > p {
+  font-size: 0.9rem;
+  letter-spacing: -0.05rem;
+  font-weight: 400;
+}
+.cont1 {
+  position: relative;
+}
+.cont1 .heading {
+  padding-inline: 1rem;
+  margin-top: 1rem;
+}
+.cont1 .heading h1 {
+  font-size: clamp(40px, 20vw, 200px);
+  font-weight: 100;
+  line-height: clamp(35px, 18vw, 180px);
+  letter-spacing: clamp(-8px, -2vw, -180px);
+}
+.cont1 .heading > h1 {
+  text-align: right;
+}
+.cont1 span {
+  display: flex;
+  gap: 1rem;
+}
+.cont1 .heading .wrapper {
+  font-size: clamp(5px, 3.5vw, 30px);
+}
+.cont1Images {
+  display: flex;
+  padding-inline: 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative;
+}
+#tape {
+  position: absolute;
+  top: 29%;
+  width: 20vw;
+  mix-blend-mode: multiply;
+}
+.cont1Images .wrapper img {
+  width: 40vw;
+  max-width: 400px;
+  border: 2px solid black;
+  display: block;
+}
+.cont1Images .wrapper p {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+.cont1Images .wrapper p:nth-of-type(2) {
+  margin-left: 10vw;
+}
+.explore {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  gap: 0.5rem;
+  font-weight: 300;
+  /* position: absolute;
+    right: 2rem; */
+  margin-top: 2rem;
+}
+.shopAll{
+    padding-right: 16px;
+}
+ .images {
+  background: url(assets/5d14818767ac37ac193eccf4_circle-container.svg);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .images:hover {
+  animation: spin linear 300ms 1;
+}
+.up{
+    transform: rotate(270deg);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.marqueeWrap {
+  animation: infiniteMarquee infinite linear 4s;
+  display: flex;
+  white-space: nowrap;
+}
+.marqueeWrap:hover {
+  animation-play-state: paused;
+}
+.marquee {
+  width: 100%;
+  margin-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  /* padding-inline: 1rem; */
+  background-color: rgb(221, 201, 42);
+}
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marquee p {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: clamp(15px, 3.5vw, 29px);
+  padding: 0.3rem 1.2vw;
+  align-self: center;
+}
+.cont2 {
+  margin-top: 5rem;
+  padding-inline: 1rem;
+  position: relative;
+}
+.cont2 .heading a {
+  cursor: none;
+  color: inherit;
+  text-underline-offset: 2px;
+  display: inline;
+  font-size: clamp(10px, 2vw, 25px);
+  margin-right: 4vw;
+  font-weight: 1000;
+}
+.cont2 .heading h2:nth-of-type(1) {
+  display: inline;
+}
+.cont2 .heading h2:nth-of-type(1) span {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.cont2 h2 {
+  font-size: clamp(10px, 5vw, 60px);
+  font-weight: 200;
+}
+.cont3 {
+  position: relative;
+}
+.slider {
+    width: 150%;
+  /* position: absolute; */
+  transition: all 500ms;
+  margin-top: 4rem;
+  padding-inline: 1rem;
+  display: inline-flex;
+}
+.slider .card img:nth-of-type(1) {
+  max-width: 350px;
+  width: 50vw;
+  height: 25vw;
+  object-fit: cover;
+  max-height: 150px;
+}
+.slider .card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  width: 60vw;
+  max-width: 400px;
+  border: 2px solid black;
+  margin: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: rgb(231, 214, 196);
+}
+#unisexLogo {
+  width: 80px;
+}
+.card .size {
+  font-size: clamp(5px, 3vw, 13px);
+  font-weight: 700;
+}
+.card .name {
+  font-size: clamp(20px, 14vw, 40px);
+  font-family: "tttrailer", sans-serif;
+}
+.card .cut {
+  text-decoration: line-through;
+  font-size: clamp(15px, 3vw, 30px);
+  font-weight: 700;
+}
+.card .og {
+  font-size: clamp(20px, 5vw, 35px);
+}
+
+footer{
+    padding-block: 5rem;
+    padding-inline:  0.5rem 2rem;
+    background-color: rgb(252, 249, 238);
+    display: flex;
+    justify-content: space-between;
+}
+footer p{
+    font-size: clamp(10px,2vw,20px);
+    margin-bottom: 0.6rem;
+}
+footer .effect{
+    font-size: clamp(18px,3vw,30px);
+}
+footer .wrap{
+    position: relative;
+    /* background-color: green; */
+    overflow: hidden;
+}
+footer .wrap .first{
+    top: 0;
+    transition: all 0.5s;
+}
+footer .wrap:hover .first{
+    transform: translateY(-100%);
+}
+footer .wrap .last{
+    position: absolute;
+    bottom: -200%;
+    transform: rotate(40deg);
+    transition: all 0.5s;
+}
+footer .wrap:hover .last{
+    bottom: 0;
+    transform: rotate(0);
+}
