@@ -32,6 +32,56 @@ html,
   cursor: none;
   overflow-x: hidden;
 }
+.preload{
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  color: #fcf9ee;
+  font-size: 100px;
+  text-align: center;
+  padding-block: 3rem;
+}
+.preload img{
+  width: 50px;
+}
+.preload .wrap{
+  overflow: hidden;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.preload .inner{
+  /* transform: translateY(-134px); */
+  animation: goup linear 4s infinite;
+}
+@keyframes goup{
+  0%{
+    transform: translateY(0);
+  }
+  12.5%{
+    transform: translateY(-134px);
+  }
+  25%{
+    transform: translateY(-134px);
+  }
+  50%{
+    transform: translateY(-268px);
+  }
+  75%{
+    transform: translateY(-268px);
+  }
+  87.5%{
+    transform: translateY(-402px);
+  }
+  100%{
+    transform: translateY(-536px);
+  }
+}
 #main {
   position: relative;
 }

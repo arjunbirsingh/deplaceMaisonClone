@@ -52,8 +52,8 @@ slide.addEventListener("mouseup", stopDrag);
 slide.addEventListener("mouseleave", stopDrag);
 slide.addEventListener("mousemove", dragging);
 function startDrag(ev) {
-  start=ev.pageX;
-  console.log(start)
+  start = ev.pageX;
+  console.log(start);
   pressed = true;
 }
 function stopDrag() {
@@ -62,9 +62,13 @@ function stopDrag() {
 function dragging(ev) {
   // console.log(event.pageX)
   if (pressed) {
-    console.log(start-ev.pageX);
-    slide.style.transform = `translateX(${-start+ev.pageX}px)`;
-  }  
-
+    console.log(start - ev.pageX);
+    slide.style.transform = `translateX(${-start + ev.pageX}px)`;
+  }
 }
 // SLIDER COED GOES HERE
+let preload = document.querySelector(".preload");
+window.addEventListener("load", function hidePreload() {
+  preload.style.zIndex = -1000;
+  // console.log("bith");
+});
