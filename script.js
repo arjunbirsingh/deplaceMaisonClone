@@ -69,6 +69,8 @@ function dragging(ev) {
 // SLIDER COED GOES HERE
 let preload = document.querySelector(".preload");
 window.addEventListener("load", function hidePreload() {
+  setInterval(() => {
   preload.style.zIndex = -1000;
+  }, 4500);
   // console.log("bith");
 });

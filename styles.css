@@ -12,7 +12,7 @@
   font-family: tttrailer;
   src: url(TT_Trailers_Trial_2-000/TT\ Trailers\ Trial\ Black.ttf);
 }
-@font-face{
+@font-face {
   font-family: cyberthrone;
   src: url(Cyberthrone.ttf);
 }
@@ -32,7 +32,7 @@ html,
   cursor: none;
   overflow-x: hidden;
 }
-.preload{
+.preload {
   background-color: black;
   width: 100%;
   height: 100vh;
@@ -44,41 +44,43 @@ html,
   text-align: center;
   padding-block: 3rem;
 }
-.preload img{
+.preload img {
   width: 50px;
 }
-.preload .wrap{
+.preload .wrap {
   overflow: hidden;
   height: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.preload .inner{
+.preload .inner {
   /* transform: translateY(-134px); */
-  animation: goup linear 4s infinite;
+  animation: goup linear 4s;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
 }
-@keyframes goup{
-  0%{
+@keyframes goup {
+  0% {
     transform: translateY(0);
   }
-  12.5%{
+  12.5% {
     transform: translateY(-134px);
   }
-  25%{
+  25% {
     transform: translateY(-134px);
   }
-  50%{
+  50% {
     transform: translateY(-268px);
   }
-  75%{
+  75% {
     transform: translateY(-268px);
   }
-  87.5%{
+  87.5% {
     transform: translateY(-402px);
   }
-  100%{
+  100% {
     transform: translateY(-536px);
   }
 }
@@ -103,8 +105,8 @@ img {
   display: none;
   /* transition: top,left ease 5ms,5ms; */
 }
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 nav {
   display: flex;
@@ -217,10 +219,10 @@ nav > p {
     right: 2rem; */
   margin-top: 2rem;
 }
-.shopAll{
-    padding-right: 16px;
+.shopAll {
+  padding-right: 16px;
 }
- .images {
+.images {
   background: url(assets/5d14818767ac37ac193eccf4_circle-container.svg);
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -231,11 +233,11 @@ nav > p {
   align-items: center;
   justify-content: center;
 }
- .images:hover {
+.images:hover {
   animation: spin linear 300ms 1;
 }
-.up{
-    transform: rotate(270deg);
+.up {
+  transform: rotate(270deg);
 }
 @keyframes spin {
   0% {
@@ -305,7 +307,7 @@ nav > p {
   position: relative;
 }
 .slider {
-    width: 150%;
+  width: 150%;
   /* position: absolute; */
   transition: all 10ms;
   margin-top: 4rem;
@@ -354,88 +356,88 @@ nav > p {
 .card .og {
   font-size: clamp(20px, 5vw, 35px);
 }
-.animdiv{
-  padding:5rem 0.5rem;
+.animdiv {
+  padding: 5rem 0.5rem;
   position: relative;
   max-width: 400px;
   overflow: hidden;
 }
-.animdiv img{
+.animdiv img {
   width: 25vw;
   max-width: 100px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-@keyframes goUp{
-  0%{
+@keyframes goUp {
+  0% {
     top: -100%;
   }
-  50%{
+  50% {
     top: 50%;
   }
-  100%{
+  100% {
     top: 50%;
   }
 }
 
-.animdiv #one{
+.animdiv #one {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
 }
-.animdiv #two{
+.animdiv #two {
   position: absolute;
   bottom: 100%;
   transform: translateY(-50%);
 }
-.animdiv .changingDiv .name{
-  font-family: cyberthrone,sans-serif;
+.animdiv .changingDiv .name {
+  font-family: cyberthrone, sans-serif;
   font-size: 1rem;
   letter-spacing: 2px;
   white-space: nowrap;
   display: flex;
   align-items: center;
 }
-.animdiv .changingDiv .rev{
+.animdiv .changingDiv .rev {
   font-size: 0.7rem;
   margin-inline: 2rem;
   line-height: 0.6rem;
 }
-footer{
-    padding-block: 1rem 2rem;
-    padding-inline:  0.5rem 2rem;
-    background-color: rgb(252, 249, 238);
-    display: flex;
-    justify-content: space-between;
+footer {
+  padding-block: 1rem 2rem;
+  padding-inline: 0.5rem 2rem;
+  background-color: rgb(252, 249, 238);
+  display: flex;
+  justify-content: space-between;
 }
-footer p{
-    font-size: clamp(10px,2vw,20px);
-    margin-bottom: 0.6rem;
+footer p {
+  font-size: clamp(10px, 2vw, 20px);
+  margin-bottom: 0.6rem;
 }
-footer .effect{
-    font-size: clamp(18px,3vw,30px);
+footer .effect {
+  font-size: clamp(18px, 3vw, 30px);
 }
-footer .wrap{
-    position: relative;
-    /* background-color: green; */
-    overflow: hidden;
+footer .wrap {
+  position: relative;
+  /* background-color: green; */
+  overflow: hidden;
 }
-footer .wrap .first{
-    top: 0;
-    transition: all 0.5s;
+footer .wrap .first {
+  top: 0;
+  transition: all 0.5s;
 }
-footer .wrap:hover .first{
-    transform: translateY(-100%);
+footer .wrap:hover .first {
+  transform: translateY(-100%);
 }
-footer .wrap .last{
-    position: absolute;
-    bottom: -200%;
-    transform: rotate(40deg);
-    transition: all 0.5s;
+footer .wrap .last {
+  position: absolute;
+  bottom: -200%;
+  transform: rotate(40deg);
+  transition: all 0.5s;
 }
-footer .wrap:hover .last{
-    bottom: 0;
-    transform: rotate(0);
+footer .wrap:hover .last {
+  bottom: 0;
+  transform: rotate(0);
 }
