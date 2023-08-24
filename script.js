@@ -37,37 +37,34 @@ exploreImages[0].addEventListener("mouseleave", cursorScaleDown);
 exploreImages[1].addEventListener("mouseenter", cursorScaleUp);
 exploreImages[1].addEventListener("mouseleave", cursorScaleDown);
 
-
-let footerWrap=document.querySelectorAll("footer .wrap");
-for(let i=0;i<footerWrap.length;i++){
-  footerWrap[i].addEventListener("mouseover",cursorScaleUp);
-  footerWrap[i].addEventListener("mouseleave",cursorScaleDown);
+let footerWrap = document.querySelectorAll("footer .wrap");
+for (let i = 0; i < footerWrap.length; i++) {
+  footerWrap[i].addEventListener("mouseover", cursorScaleUp);
+  footerWrap[i].addEventListener("mouseleave", cursorScaleDown);
 }
 
 // SLIDER COED GOES HERE
-// let slide = document.querySelector(".slide");
-// let cont3 = document.querySelector(".cont3");
-// let x = 0;
-// let pressed = false;
-// slide.addEventListener("mousedown", pressedTrue);
-// slide.addEventListener("mouseup", pressedFalse);
-// slide.addEventListener("mousemove",draggingSlider);
-// slide.addEventListener("touchstart", pressedTrue);
-// slide.addEventListener("touchend", pressedFalse);
-// slide.addEventListener("touchmove", draggingSlider);
-// function pressedTrue(){
-//   pressed=true;
-// }
-// function pressedFalse(){
-//   pressed=false;
-// }
-// function draggingSlider(ev) {
-//   if (pressed) {
-//     if (event.type === "mousemove") {
-//       slide.style.transform = `translateX(${ev.clientX}px)`;
-//     } else {
-//       slide.style.transform = `translateX(${ev.touches[0].clientX}px)`;
-//     }
-//   }
-// }
+let slide = document.querySelector(".slider");
+let start;
+let pressed = false;
+slide.addEventListener("mousedown", startDrag);
+slide.addEventListener("mouseup", stopDrag);
+slide.addEventListener("mouseleave", stopDrag);
+slide.addEventListener("mousemove", dragging);
+function startDrag(ev) {
+  start=ev.pageX;
+  console.log(start)
+  pressed = true;
+}
+function stopDrag() {
+  pressed = false;
+}
+function dragging(ev) {
+  // console.log(event.pageX)
+  if (pressed) {
+    console.log(start-ev.pageX);
+    slide.style.transform = `translateX(${-start+ev.pageX}px)`;
+  }  
+
+}
 // SLIDER COED GOES HERE

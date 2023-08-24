@@ -12,6 +12,10 @@
   font-family: tttrailer;
   src: url(TT_Trailers_Trial_2-000/TT\ Trailers\ Trial\ Black.ttf);
 }
+@font-face{
+  font-family: cyberthrone;
+  src: url(Cyberthrone.ttf);
+}
 * {
   -webkit-user-select: none;
   user-select: none;
@@ -102,6 +106,8 @@ nav > p {
   position: relative;
 }
 .cont1 .heading {
+  max-width: 950px;
+  margin: auto;
   padding-inline: 1rem;
   margin-top: 1rem;
 }
@@ -251,11 +257,15 @@ nav > p {
 .slider {
     width: 150%;
   /* position: absolute; */
-  transition: all 500ms;
+  transition: all 10ms;
   margin-top: 4rem;
   padding-inline: 1rem;
+  transform-origin: center;
   display: inline-flex;
 }
+/* .slider:hover{
+  transform: translateX(-400px);
+} */
 .slider .card img:nth-of-type(1) {
   max-width: 350px;
   width: 50vw;
@@ -294,9 +304,57 @@ nav > p {
 .card .og {
   font-size: clamp(20px, 5vw, 35px);
 }
+.animdiv{
+  padding:5rem 0.5rem;
+  position: relative;
+  max-width: 400px;
+  overflow: hidden;
+}
+.animdiv img{
+  width: 25vw;
+  max-width: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@keyframes goUp{
+  0%{
+    top: -100%;
+  }
+  50%{
+    top: 50%;
+  }
+  100%{
+    top: 50%;
+  }
+}
 
+.animdiv #one{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+.animdiv #two{
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(-50%);
+}
+.animdiv .changingDiv .name{
+  font-family: cyberthrone,sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.animdiv .changingDiv .rev{
+  font-size: 0.7rem;
+  margin-inline: 2rem;
+  line-height: 0.6rem;
+}
 footer{
-    padding-block: 5rem;
+    padding-block: 1rem 2rem;
     padding-inline:  0.5rem 2rem;
     background-color: rgb(252, 249, 238);
     display: flex;
